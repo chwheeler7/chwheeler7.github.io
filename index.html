@@ -1,6 +1,7 @@
 <html>
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Signup</title>
 	<link href="https://fonts.googleapis.com/css?family=Titillium+Web&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="style.css">
@@ -29,19 +30,19 @@
 	<div class="container outer" align="center">
 		<div class="header"><img src="logo.png" width="50%"></div>
 		<form method="GET" class="form" align="left">
-			<div>First Name<input type="text" name="firstname"></input></div>
-			<div>Last Name<input type="text" name="lastname"></input></div>
-			<div>Gender<select name="gender">
+			<input type="text" name="firstname" placeholder="First Name"></input>
+			<input type="text" name="lastname" placeholder="Last Name"></input>
+			<div class="special"><div>Gender</div><select name="gender" placeholder="Gender">
 				<option value="">
 				<option value="male">Male
 				<option value="female">Female
 				<option value="other">Other
 			</select></div>
-			<div>Birthday<input type="date" id="birthday" name="birthday"></input></div>
-			<div>Email*<input type="email" name="email" required></input></div>
-			<div>Password*<input type="password" name="password" minlength=8 required></input></div>
-			<div><input type="submit" value="Submit" class="btn-primary"></input></div>
-			<div><input type="reset" value="Reset" class="btn-secondary"></input></div>
+			<div class="special"><div>Birthday</div><input type="date" id="birthday" name="birthday"></input></div>
+			<input type="email" name="email" placeholder="Email (Required)" required></input>
+			<input type="password" name="password" placeholder="Password (Required)" minlength=8 required></input>
+			<input type="submit" value="Submit" class="btn-primary"></input>
+			<input type="reset" value="Reset" class="btn-secondary"></input>
 		</form>
 	</div>
 </body>
