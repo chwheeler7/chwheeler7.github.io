@@ -18,10 +18,10 @@
 .form {
 	align-items: flex-end;
 	display: grid;
-	grid-column-gap: 0.2in;
+	grid-column-gap: 0.4in;
 	grid-template-columns: repeat(auto-fill, minmax(2in ,1fr));
 	grid-template-rows: repeat(auto-fill, 4rem);
-	margin: 0 0.2in;
+	margin: 0 0.6in;
 	justify-content: center;
 }
 
@@ -59,7 +59,7 @@ body {
 	display: grid;
 	font-family: 'Titillium Web', sans-serif;
 	font-size: 1rem;
-	grid-template-columns: minmax(2.4in, 6in);
+	grid-template-columns: minmax(3in, 5.6in);
 	height: 100%;
 	margin: 0;
 	width: 100%;
