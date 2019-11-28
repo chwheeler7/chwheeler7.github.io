@@ -1,25 +1,48 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-
-	<title>Startup Page</title>
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-	<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+	<title>Signup</title>
+	<link href="https://fonts.googleapis.com/css?family=Titillium+Web&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="style.css">
-	<style>
-	body {background-color: black;
-		background-image: url("https://www.larutadelsorigens.cat/wallpic/full/5-52242_keyboard-hd-wallpaper-black-keyboard.jpg");
-		background-size: cover;
-		background-position: center;
-	}
-	</style>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script>
+		$(function(){
+		    var dtToday = new Date();
+
+		    var month = dtToday.getMonth() + 1;
+		    var day = dtToday.getDate();
+		    var year = dtToday.getFullYear();
+
+		    if(month < 10)
+		        month = '0' + month.toString();
+		    if(day < 10)
+		        day = '0' + day.toString();
+
+		    var maxDate = (year-13) + '-' + month + '-' + day;    
+		    var minDate = (year-120) + '-' + month + '-' + day;    
+		    $('#birthday').attr('max', maxDate);
+		    $('#birthday').attr('min', minDate);
+		});
+	</script>
 </head>
 <body>
-	<div class="container d-flex align-items-center h-100">
-		<div class="row" align-items="center">
-			<header class="text-center col-12"><h1 class="text-uppercase">The Biggest Startup Event of the Year</h1></header>
-			<div class="buffer"></div>
-			<section class="text-center col-12"><hr><button class="btn-danger text-uppercase">Find out more</button></section>
-		</div>
-	</body>
-	</html>
+	<div class="container outer" align="center">
+		<div class="header"><img src="logo.png" width="50%"></div>
+		<form method="GET" class="form" align="left">
+			<div>First Name<input type="text" name="firstname"></input></div>
+			<div>Last Name<input type="text" name="lastname"></input></div>
+			<div>Gender<select name="gender">
+				<option value="">
+				<option value="male">Male
+				<option value="female">Female
+				<option value="other">Other
+			</select></div>
+			<div>Birthday<input type="date" id="birthday" name="birthday"></input></div>
+			<div>Email*<input type="email" name="email" required></input></div>
+			<div>Password*<input type="password" name="password" minlength=8 required></input></div>
+			<div><input type="submit" value="Submit" class="btn-primary"></input></div>
+			<div><input type="reset" value="Reset" class="btn-secondary"></input></div>
+		</form>
+	</div>
+</body>
+</html>
