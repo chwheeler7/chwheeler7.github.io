@@ -36,13 +36,13 @@ input, select {
 }
 
 .btn-primary {
-	background-color: rgb(90, 130, 250);
+	background-color: #3377dd;
 	color: white;
 	font-weight: 600;
 }
 
 .btn-secondary {
-	background-color: gray;
+	background-color: #888888;
 	color: white;
 	font-weight: 600;
 }
