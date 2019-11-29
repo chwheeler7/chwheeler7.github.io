@@ -59,7 +59,8 @@ input:hover, select:hover {
 
 body {
 	background: rgb(80,160,205);
-	background: url("https://www.larutadelsorigens.cat/wallpic/full/5-52242_keyboard-hd-wallpaper-black-keyboard.jpg");
+	/*background: url("https://www.larutadelsorigens.cat/wallpic/full/5-52242_keyboard-hd-wallpaper-black-keyboard.jpg");*/
+	background: url("./person-on-a-bridge-near-a-lake.png");
 	background-position: center;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
