@@ -1,3 +1,5 @@
+
+<!DOCTYPE html>
 <html>
 <head>
 	<meta charset="UTF-8">
@@ -6,44 +8,35 @@
 	<link href="https://fonts.googleapis.com/css?family=Titillium+Web&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="style.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-	<script>
-		$(function(){
-		    var dtToday = new Date();
-
-		    var month = dtToday.getMonth() + 1;
-		    var day = dtToday.getDate();
-		    var year = dtToday.getFullYear();
-
-		    if(month < 10)
-		        month = '0' + month.toString();
-		    if(day < 10)
-		        day = '0' + day.toString();
-
-		    var maxDate = (year-13) + '-' + month + '-' + day;    
-		    var minDate = (year-120) + '-' + month + '-' + day;    
-		    $('#birthday').attr('max', maxDate);
-		    $('#birthday').attr('min', minDate);
-		});
-	</script>
 </head>
 <body>
 	<div class="container" align="center">
-		<div class="header"><img src="logo.png" width="50%"></div>
+		<div class="header">
+			<img src="logo.png" width="50%">
+			<div id="rgb"></div>
+		</div>
 		<form method="GET" class="form" align="left">
 			<input type="text" name="firstname" placeholder="First Name"></input>
 			<input type="text" name="lastname" placeholder="Last Name"></input>
-			<div class="special"><div>Gender</div><select name="gender" placeholder="Gender">
-				<option value="">
-				<option value="male">Male
-				<option value="female">Female
-				<option value="other">Other
-			</select></div>
-			<div class="special"><div>Birthday</div><input type="date" id="birthday" name="birthday"></input></div>
+			<div class="special">
+				<div>Gender</div>
+				<select name="gender" placeholder="Gender">
+					<option value=""></option>
+					<option value="male">Male</option>
+					<option value="female">Female</option>
+					<option value="other">Other</option>
+				</select>
+			</div>
+			<div class="special">
+				<div>Birthday</div>
+				<input type="date" id="birthday" name="birthday"></input>
+			</div>
 			<input type="email" name="email" placeholder="Email (Required)" required></input>
 			<input type="password" name="password" placeholder="Password (Required)" minlength=8 required></input>
 			<input type="submit" value="Submit" class="btn-primary"></input>
 			<input type="reset" value="Reset" class="btn-secondary"></input>
 		</form>
 	</div>
+	<script src="./script.js"></script>
 </body>
 </html>
