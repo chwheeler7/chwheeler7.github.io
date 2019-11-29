@@ -41,13 +41,13 @@ input, select {
 }
 
 .btn-primary {
-	background-color: #3377dd;
+	background-color: blue;
 	color: white;
 	font-weight: 600;
 }
 
 .btn-secondary {
-	background-color: #888888;
+	background-color: gray;
 	color: white;
 	font-weight: 600;
 }
