@@ -1,3 +1,14 @@
+html {
+	height: 100%;
+	width: 100%;
+}
+
+@media only screen and (max-height: 400px) {
+	html {
+		font-size: 75%;
+	}
+}
+
 .container {
 	background: #FFFFFF;
 	background: rgba(255, 255, 255, 0.95);
@@ -8,17 +19,15 @@
 .header {
 	display: grid;
 	align-content: center;
-	padding: 3rem;
+	padding: 3%;
 }
 
 .form {
 	display: grid;
 	font-size: 0.9rem;
-	grid-gap: 2rem;
+	grid-gap: 1rem 2rem;
 	grid-template-columns: repeat(auto-fill, minmax(14rem, 1fr));
-	grid-template-rows: repeat(auto-fill, 1rem);
-	height: 38rem;
-	justify-content: flex-start;
+	grid-template-rows: auto;
 	margin: 0 4rem;
 }
 
@@ -34,20 +43,21 @@ input, select {
 .special {
 	display: grid;
 	grid-template-columns: 4rem 1fr;
+	grid-template-rows: 2rem;
 }
 
 .special > div {
-	padding-top: 0.2rem;
+	padding-top: 0.3rem;
 }
 
 .btn-primary {
-	background-color: blue;
+	background-color: #2266ee;
 	color: white;
 	font-weight: 600;
 }
 
 .btn-secondary {
-	background-color: gray;
+	background-color: #888888;
 	color: white;
 	font-weight: 600;
 }
@@ -59,7 +69,8 @@ input:hover, select:hover {
 body {
 	background: rgb(80,160,205);
 	/*background: url("https://www.larutadelsorigens.cat/wallpic/full/5-52242_keyboard-hd-wallpaper-black-keyboard.jpg");*/
-	background: url("./person-on-a-bridge-near-a-lake.png");
+	background: url("./person-on-a-bridge-near-a-lake.png") no-repeat center center fixed;
+	background-attachment:scroll;
 	background-position: center;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
@@ -70,7 +81,7 @@ body {
 	font-size: 1rem;
 	grid-template-columns: minmax(22rem, 38rem);
 	height: 100%;
-	margin: 0;
+	margin: auto 0;
 	width: 100%;
 }
 
